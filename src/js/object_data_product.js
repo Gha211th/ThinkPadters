@@ -1,7 +1,7 @@
 export const dataProduct = {
   thinkpad_1: {
     product: "ThinkPad X1 Yoga Gen 7",
-    image: "/assets/tp-x1-y-g7.png",
+    image: "../public/assets/tp-x1-y-g7.png",
     detail: [
       "Powerful lightweight Intel® Evo™ 2-in-1 laptop",
       "FHD cameras(1920x1080), 4 mics & Dolby Voice®",

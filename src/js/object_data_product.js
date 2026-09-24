@@ -1,7 +1,7 @@
 export const dataProduct = {
   thinkpad_1: {
     product: "ThinkPad X1 Yoga Gen 7",
-    image: "../public/assets/tp-x1-y-g7.png",
+    image: "/assets/tp-x1-y-g7.png",
     detail: [
       "Powerful lightweight Intel® Evo™ 2-in-1 laptop",
       "FHD cameras(1920x1080), 4 mics & Dolby Voice®",
@@ -46,7 +46,7 @@ export const dataProduct = {
   },
   thinkpad_6: {
     product: "ThinkPad P16v",
-    image: "../assets/tp-p16v.png",
+    image: "/assets/tp-p16v.png",
     detail: [
       "Powerful AMD Ryzen™ PRO-powered mobile workstation",
       "Supports professional NVIDIA® RTX™ discrete graphics",
@@ -55,7 +55,7 @@ export const dataProduct = {
   },
   thinkpad_7: {
     product: "ThinkPad T14 Gen 4",
-    image: "../assets/tp-t14-g4.png",
+    image: "/assets/tp-t14-g4.png",
     detail: [
       "14″ business laptop w/ 13th Gen Intel® Core™ processor",
       "Highly configurable with emphasis on security & speed",
@@ -64,7 +64,7 @@ export const dataProduct = {
   },
   thinkpad_8: {
     product: "ThinkPad P16v",
-    image: "../assets/tp-p16v.png",
+    image: "/assets/tp-p16v.png",
     detail: [
       "Powerful AMD Ryzen™ PRO-powered mobile workstation",
       "Supports professional NVIDIA® RTX™ discrete graphics",

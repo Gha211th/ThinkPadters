@@ -1,50 +1,56 @@
 export const dataReviews = {
   review_1: {
-    name: "Budi Santoso",
+    name: "Ghufron Cihuy",
     review:
       "Keyboard ThinkPad T480 juara banget buat ngoding seharian. Tokonya juga ramah dan pelayanannya cepat!",
-    url: "",
+    url: "../assets/profile_1.png",
   },
   review_2: {
-    name: "Siti Rahma",
+    name: "Yoshikawa",
     review:
       "Beli ThinkPad X1 Carbon bekas rasa baru di sini. Performanya ngebut dan layarnya jernih buat tugas.",
-    url: "",
+    url: "../assets/profile_2.png",
   },
   review_3: {
-    name: "Ahmad Fauzi",
+    name: "Jvsholz",
     review:
       "Toko laptop ThinkPad paling lengkap di kota ini. Konsultasi spek dulu sebelum beli, dilayani dgn sabar.",
-    url: "",
+    url: "../assets/profile_3.png",
   },
   review_4: {
-    name: "Dewi Lestari",
+    name: "King Resbob",
     review:
       "Numpad di ThinkPad L14 sangat membantu kerjaan kantor saya. Build quality-nya kokoh dan tahan banting.",
-    url: "",
+    url: "../assets/profile_4.png",
   },
   review_5: {
-    name: "Rizky Pratama",
+    name: "Akira Nakai San",
     review:
       "Garansi tokonya mantap, sempat ada kendala kecil langsung dibantu klaim tanpa ribet. Recommended seller!",
-    url: "",
+    url: "../assets/profile_5.png",
   },
   review_6: {
-    name: "Citra Kirana",
+    name: "Lord Javier",
     review:
       "Ngetik berjam-jam pakai ThinkPad T14 gak bikin tangan pegel. Tokonya juga kasih bonus tas original.",
-    url: "",
+    url: "../assets/profile_6.png",
   },
   review_7: {
-    name: "Eko Prasetyo",
+    name: "kingnya AQIL (HitZeed)",
     review:
       "Walaupun seri bisnis, ThinkPad P51 yang saya beli di sini tangguh banget buat render video dan multitasking.",
-    url: "",
+    url: "../assets/profile_7.png",
   },
   review_8: {
-    name: "Maya Indah",
+    name: "Sora Kasu",
     review:
       "Pelayanan toko sangat profesional. Laptop ThinkPad Yoga fleksibel banget buat meeting di luar kantor.",
-    url: "",
+    url: "../assets/profile_8.png",
+  },
+  review_9: {
+    name: "Linus Torvaldz",
+    review:
+      "Laptop berkualitas, Thinkpad p16v saya mendapatkan garansi 1 tahun dari toko, thank you :)",
+    url: "../assets/profile_9.png",
   },
 };

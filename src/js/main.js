@@ -1,4 +1,5 @@
 import { dataProduct } from "./object_data_product";
+import { dataReviews } from "./object_reviews";
 
 const burgerList = document.querySelector("#burger-list");
 const navbarList = document.querySelector("#navbar-menu");
@@ -72,5 +73,38 @@ function displayProducts() {
     productContainer.appendChild(cardProduct);
   });
 }
-
 displayProducts();
+
+const reviewsContainer = document.querySelector("#container-reviews");
+
+function displayReviews() {
+  const objectReviews = Object.values(dataReviews);
+
+  if (!reviewsContainer) return;
+
+  reviewsContainer.innerHTML = "";
+
+  objectReviews.forEach((item) => {
+    const cardReview = document.createElement("div");
+    cardReview.className =
+      "w-full max-w-100 flex flex-col justify-between p-5 bg-white outline-1 outline-solid outline-black/50 transition-all duration-300 hover:scale-95";
+    const titleReview = document.createElement("h1");
+    titleReview.textContent = item.name;
+    titleReview.className = "text-lg font-medium";
+
+    const userReview = document.createElement("span");
+    userReview.textContent = item.review;
+    userReview.className = "text-sm";
+
+    const contentReview = document.createElement("div");
+
+    contentReview.appendChild(titleReview);
+    contentReview.appendChild(userReview);
+
+    cardReview.appendChild(contentReview);
+
+    reviewsContainer.appendChild(cardReview);
+  });
+}
+
+displayReviews();

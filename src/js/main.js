@@ -34,7 +34,7 @@ function displayProducts() {
   objectProduct.forEach((item) => {
     const cardProduct = document.createElement("div");
     cardProduct.className =
-      "w-full max-w-100 flex flex-col justify-between p-5 bg-white outline-1 outline-solid outline-black/50 transition-all duration-300 hover:scale-95";
+      "w-full max-w-120 md:max-w-90 xl:max-w-100 flex flex-col justify-between p-5 bg-white transition-all duration-300 hover:scale-95 shadow-[0_0_5px_rgba(0,0,0,0.15)] hover:shadow-lg rounded-xl";
 
     const image = document.createElement("img");
     image.src = item.image;
@@ -88,7 +88,8 @@ function displayReviews() {
   objectReviews.forEach((item) => {
     const cardReview = document.createElement("div");
     cardReview.className =
-      "w-full max-w-120 flex flex-row justify-center items-start gap-x-4 p-5 bg-white outline-1 outline-solid outline-black/50 transition-all duration-300 hover:scale-95";
+      "w-full max-w-120 flex flex-row justify-center items-start gap-x-4 p-5 bg-white shadow-[0_0_5px_rgba(0,0,0,0.10)] hover:shadow-lg transition-all duration-300 hover:scale-95 rounded-xl";
+    // outline-1 outline-solid outline-black/50
 
     const imgProfile = document.createElement("img");
     imgProfile.src = item.url;
@@ -96,9 +97,18 @@ function displayReviews() {
     imgProfile.className = "w-auto h-30 rounded-full";
     imgProfile.loading = "lazy";
 
-    const titleReview = document.createElement("h1");
-    titleReview.textContent = item.name;
-    titleReview.className = "text-lg font-medium";
+    const ratingText = document.createElement("span");
+    ratingText.textContent = ` (${item.rating})`;
+    ratingText.className = "text-xs";
+
+    const userName = document.createElement("h1");
+    userName.textContent = item.name;
+    userName.className = "text-lg font-medium";
+
+    const titleReview = document.createElement("div");
+    titleReview.className = "flex flex-row gap-x-1 items-center";
+    titleReview.appendChild(userName);
+    titleReview.appendChild(ratingText);
 
     const userReview = document.createElement("span");
     userReview.textContent = item.review;

@@ -40,6 +40,7 @@ function displayProducts() {
     image.src = item.image;
     image.alt = item.product;
     image.className = "w-md h-auto";
+    image.loading = "lazy";
 
     const textContent = document.createElement("div");
     textContent.className = "flex flex-col gap-y-4 px-5";
@@ -87,12 +88,13 @@ function displayReviews() {
   objectReviews.forEach((item) => {
     const cardReview = document.createElement("div");
     cardReview.className =
-      "w-full max-w-120 flex flex-row justify-center items-start gap-x-3 p-5 bg-white outline-1 outline-solid outline-black/50 transition-all duration-300 hover:scale-95";
+      "w-full max-w-120 flex flex-row justify-center items-start gap-x-4 p-5 bg-white outline-1 outline-solid outline-black/50 transition-all duration-300 hover:scale-95";
 
     const imgProfile = document.createElement("img");
     imgProfile.src = item.url;
     imgProfile.alt = item.name;
-    imgProfile.className = "w-auto h-30";
+    imgProfile.className = "w-auto h-30 rounded-full";
+    imgProfile.loading = "lazy";
 
     const titleReview = document.createElement("h1");
     titleReview.textContent = item.name;

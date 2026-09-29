@@ -142,7 +142,5 @@ function displayReviews() {
 displayReviews();
 
 window.addEventListener("load", () => {
-  if (window.AOS) {
-    window.AOS.refresh();
-  }
+  window.AOS.refresh();
 });

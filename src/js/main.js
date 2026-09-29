@@ -32,9 +32,14 @@ function displayProducts() {
   productContainer.innerHTML = "";
 
   objectProduct.forEach((item) => {
+    const wrapperAos = document.createElement("div");
+    wrapperAos.className = "w-auto";
+    wrapperAos.setAttribute("data-aos", "fade-up");
+
     const cardProduct = document.createElement("div");
     cardProduct.className =
       "w-full max-w-120 md:max-w-90 xl:max-w-100 flex flex-col justify-between p-5 bg-white transition-all duration-300 hover:scale-95 shadow-[0_0_5px_rgba(0,0,0,0.15)] hover:shadow-lg rounded-xl";
+    //    cardProduct.setAttribute("data-aos", "fade-up");
 
     const image = document.createElement("img");
     image.src = item.image;
@@ -71,7 +76,9 @@ function displayProducts() {
     cardProduct.appendChild(textContent);
     cardProduct.appendChild(buttonDetail);
 
-    productContainer.appendChild(cardProduct);
+    wrapperAos.appendChild(cardProduct);
+
+    productContainer.appendChild(wrapperAos);
   });
 }
 displayProducts();
@@ -86,6 +93,10 @@ function displayReviews() {
   reviewsContainer.innerHTML = "";
 
   objectReviews.forEach((item) => {
+    const wrapperAos = document.createElement("div");
+    wrapperAos.className = "w-auto";
+    wrapperAos.setAttribute("data-aos", "flip-down");
+
     const cardReview = document.createElement("div");
     cardReview.className =
       "w-full max-w-120 flex flex-row justify-center items-start gap-x-4 p-5 bg-white shadow-[0_0_5px_rgba(0,0,0,0.10)] hover:shadow-lg transition-all duration-300 hover:scale-95 rounded-xl";
@@ -122,8 +133,16 @@ function displayReviews() {
 
     cardReview.appendChild(contentReview);
 
-    reviewsContainer.appendChild(cardReview);
+    wrapperAos.appendChild(cardReview);
+
+    reviewsContainer.appendChild(wrapperAos);
   });
 }
 
 displayReviews();
+
+window.addEventListener("load", () => {
+  if (window.AOS) {
+    window.AOS.refresh();
+  }
+});

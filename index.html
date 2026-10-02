@@ -17,15 +17,11 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <header
-      class="fixed top-0 w-full h-auto flex flex-row justify-between items-center px-8 bg-white shadow-lg font-roboto z-50"
+      class="fixed top-0 left-0 w-full max-w-[100vw] h-auto flex flex-row justify-between items-center px-8 bg-white shadow-lg font-roboto z-50"
     >
-      <img
-        src="assets/logo-thinkpad.svg"
-        alt="logo"
-        class="size-20 cursor-pointer"
-      />
+      <img src="assets/logo-thinkpad.svg" alt="logo" class="size-20" />
       <ul
         class="hidden absolute top-full left-0 w-full bg-white shadow-md flex-col p-8 gap-y-6 xl:static xl:flex xl:flex-row xl:shadow-none xl:w-auto xl:p-0 xl:items-center xl:gap-x-6"
         id="navbar-menu"
@@ -174,12 +170,13 @@
             aesthetic of classic IBM and Lenovo ThinkPads.
           </p>
         </div>
-        <img
-          src="/assets/thinkpad-fly.jpeg"
-          alt="thinkpad-fly"
-          class="w-lg h-auto xl:w-xl transition-all duration-300 hover:scale-90"
-          data-aos="zoom-in-left"
-        />
+        <div data-aos="zoom-in-left">
+          <img
+            src="/assets/thinkpad-fly.jpeg"
+            alt="thinkpad-fly"
+            class="w-lg h-auto xl:w-lg transition-all duration-300 hover:scale-90"
+          />
+        </div>
       </div>
     </section>
     <section

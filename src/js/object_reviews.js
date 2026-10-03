@@ -42,7 +42,7 @@ export const dataReviews = {
     rating: "⭐⭐⭐⭐⭐",
   },
   review_7: {
-    name: "kingnya AQIL (HitZeed)",
+    name: "HitZeed",
     review:
       "Walaupun seri bisnis, ThinkPad P51 yang saya beli di sini tangguh banget buat render video dan multitasking.",
     url: "../assets/profile_7.jpeg",

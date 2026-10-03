@@ -38,7 +38,7 @@ function displayProducts() {
 
     const cardProduct = document.createElement("div");
     cardProduct.className =
-      "w-full max-w-120 md:max-w-90 xl:max-w-100 flex flex-col justify-between p-5 bg-white transition-all duration-300 hover:scale-95 shadow-[0_0_5px_rgba(0,0,0,0.15)] hover:shadow-lg rounded-xl";
+      "w-full max-w-120 h-full md:max-w-90 lg:max-w-70 xl:max-w-100 flex flex-col justify-center items-start p-5 bg-white transition-all duration-300 hover:scale-95 shadow-[0_0_5px_rgba(0,0,0,0.15)] hover:shadow-lg rounded-xl";
     //    cardProduct.setAttribute("data-aos", "fade-up");
 
     const image = document.createElement("img");
@@ -67,7 +67,7 @@ function displayProducts() {
     const buttonDetail = document.createElement("div");
     buttonDetail.textContent = "Product Detail";
     buttonDetail.className =
-      "px-3 py-2 bg-lenovo-blue text-white text-md font-medium mx-5 text-center mt-10";
+      "w-full py-2 bg-lenovo-blue text-white text-md font-medium text-center mt-10";
 
     textContent.appendChild(title);
     textContent.appendChild(listDetail);
@@ -99,7 +99,7 @@ function displayReviews() {
 
     const cardReview = document.createElement("div");
     cardReview.className =
-      "w-full max-w-120 flex flex-row justify-center items-start gap-x-4 p-5 bg-white shadow-[0_0_5px_rgba(0,0,0,0.10)] hover:shadow-lg transition-all duration-300 hover:scale-95 rounded-xl";
+      "w-full max-w-120 lg:max-w-100 flex flex-row justify-center items-start gap-x-4 p-5 bg-white shadow-[0_0_5px_rgba(0,0,0,0.10)] hover:shadow-lg transition-all duration-300 hover:scale-95 rounded-xl";
     // outline-1 outline-solid outline-black/50
 
     const imgProfile = document.createElement("img");
@@ -123,7 +123,7 @@ function displayReviews() {
 
     const userReview = document.createElement("span");
     userReview.textContent = item.review;
-    userReview.className = "text-sm";
+    userReview.className = "text-sm lg:text-xs";
 
     const contentReview = document.createElement("div");
 

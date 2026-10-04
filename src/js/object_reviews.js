@@ -1,6 +1,6 @@
 export const dataReviews = {
   review_1: {
-    name: "Ghufron Cihuy",
+    name: "Ghufron",
     review:
       "Keyboard ThinkPad T480 juara banget buat ngoding seharian. Tokonya juga ramah dan pelayanannya cepat! Pengajian saya jadi lancar",
     url: "../assets/profile_1.jpeg",

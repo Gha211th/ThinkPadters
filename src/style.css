@@ -15,5 +15,5 @@
   --font-roboto: "Roboto", sans-serif;
 
   /*CUSTOM FONT*/
-  --text-tiny: 0.5rem;
+  --breakpoint-xs: 30rem;
 }

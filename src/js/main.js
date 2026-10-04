@@ -31,14 +31,20 @@ function displayProducts() {
 
   productContainer.innerHTML = "";
 
-  objectProduct.forEach((item) => {
+  // Adding a screen condition
+  const isLGscreen = window.matchMedia("(min-width: 1024px)").matches;
+
+  /// limiting the data size for display into website
+  const limitData = isLGscreen ? objectProduct : objectProduct.slice(0, 4);
+
+  limitData.forEach((item) => {
     const wrapperAos = document.createElement("div");
     wrapperAos.className = "w-auto";
     wrapperAos.setAttribute("data-aos", "fade-up");
 
     const cardProduct = document.createElement("div");
     cardProduct.className =
-      "w-full max-w-120 h-full md:max-w-90 lg:max-w-70 xl:max-w-100 flex flex-col justify-center items-start p-5 bg-white transition-all duration-300 hover:scale-95 shadow-[0_0_5px_rgba(0,0,0,0.15)] hover:shadow-lg rounded-xl";
+      "w-full max-w-120 h-full md:max-w-90 xl:max-w-100 flex flex-col justify-center items-start p-5 bg-white transition-all duration-300 hover:scale-95 shadow-[0_0_5px_rgba(0,0,0,0.15)] hover:shadow-lg rounded-xl";
     //    cardProduct.setAttribute("data-aos", "fade-up");
 
     const image = document.createElement("img");
@@ -61,7 +67,7 @@ function displayProducts() {
     item.detail.forEach((detailText) => {
       const detailItem = document.createElement("li");
       detailItem.textContent = detailText;
-      detailItem.className = listDetail.appendChild(detailItem);
+      listDetail.appendChild(detailItem);
     });
 
     const buttonDetail = document.createElement("div");
@@ -83,6 +89,10 @@ function displayProducts() {
 }
 displayProducts();
 
+window.addEventListener("resize", () => {
+  displayProducts();
+});
+
 const reviewsContainer = document.querySelector("#container-reviews");
 
 function displayReviews() {
@@ -92,14 +102,20 @@ function displayReviews() {
 
   reviewsContainer.innerHTML = "";
 
-  objectReviews.forEach((item) => {
+  // Adding a screen condition
+  const isLGscreen = window.matchMedia("(min-width: 1024px)").matches;
+
+  /// limiting the data size for display into website
+  const limitData = isLGscreen ? objectReviews : objectReviews.slice(0, 4);
+
+  limitData.forEach((item) => {
     const wrapperAos = document.createElement("div");
     wrapperAos.className = "w-auto";
     wrapperAos.setAttribute("data-aos", "flip-down");
 
     const cardReview = document.createElement("div");
     cardReview.className =
-      "w-full max-w-120 lg:max-w-100 flex flex-row justify-center items-start gap-x-4 p-5 bg-white shadow-[0_0_5px_rgba(0,0,0,0.10)] hover:shadow-lg transition-all duration-300 hover:scale-95 rounded-xl";
+      "w-full max-w-120 flex flex-row justify-center items-start gap-x-4 p-5 bg-white shadow-[0_0_5px_rgba(0,0,0,0.10)] hover:shadow-lg transition-all duration-300 hover:scale-95 rounded-xl";
     // outline-1 outline-solid outline-black/50
 
     const imgProfile = document.createElement("img");
@@ -123,7 +139,7 @@ function displayReviews() {
 
     const userReview = document.createElement("span");
     userReview.textContent = item.review;
-    userReview.className = "text-sm lg:text-xs";
+    userReview.className = "text-xs lg:text-xs xl:text-sm";
 
     const contentReview = document.createElement("div");
 
@@ -140,6 +156,10 @@ function displayReviews() {
 }
 
 displayReviews();
+
+window.addEventListener("resize", () => {
+  displayReviews();
+});
 
 window.addEventListener("load", () => {
   window.AOS.refresh();
